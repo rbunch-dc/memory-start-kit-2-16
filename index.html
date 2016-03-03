@@ -1,0 +1,107 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Memory Game!</title>
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab">
+        <link rel="stylesheet" href="css/memory.css">
+    </head>
+    <body>
+
+    <div id="header">
+        <div id="left-header">
+            <div class="header-text">Level: 1</div>
+            <div class="header-text">Moves: 0</div>
+        </div>
+        <div id="right-header">
+            <button onclick="restart()">Start Over</button>
+        </div>
+    </div>
+
+    <div id="game-wrapper">
+        <div class="tile">
+            <div class="inside-tile unmatched" onclick="flip(this);">
+                <div class="back"></div>
+                <div class="front">
+                    <img src="img/default/monsters-03.png">
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div class="inside-tile unmatched" onclick="flip(this);">
+                <div class="back"></div>
+                <div class="front">
+                    <img src="img/default/monsters-04.png">
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div class="inside-tile unmatched" onclick="flip(this);">
+                <div class="back"></div>
+                <div class="front">
+                    <img src="img/default/monsters-02.png">
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div class="inside-tile unmatched" onclick="flip(this);">
+                <div class="back"></div>
+                <div class="front">
+                    <img src="img/default/monsters-05.png">
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div class="inside-tile unmatched" onclick="flip(this);">
+                <div class="back"></div>
+                <div class="front">
+                    <img src="img/default/monsters-01.png">
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div class="inside-tile unmatched" onclick="flip(this);">
+                <div class="back"></div>
+                <div class="front">
+                    <img src="img/default/monsters-06.png">
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div class="inside-tile unmatched" onclick="flip(this);">
+                <div class="back"></div>
+                <div class="front">
+                    <img src="img/default/monsters-07.png">
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div class="inside-tile unmatched" onclick="flip(this);">
+                <div class="back"></div>
+                <div class="front">
+                    <img src="img/default/monsters-08.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function flip(element){
+            element.children[0].style.display = 'none'; 
+            element.children[1].style.display = 'block';        
+        }
+        function restart(){
+            var back = document.getElementsByClassName('back');
+            for (var i = 0; i < back.length; i++) {
+               // list[i] is a node with the desired class name
+               back[i].style.display = 'block';
+            }
+            
+            var front = document.getElementsByClassName('front');
+            for (var i = 0; i < back.length; i++) {
+                front[i].style.display = 'none';
+            }
+        }
+    </script>
+
+
+    </body>
+</html>
